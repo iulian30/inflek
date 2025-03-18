@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
 
 export class ContentTableComponent implements AfterViewInit {
   partners: Partner[] = [];
-  displayedColumns: string[] = ['id', 'partnerName', 'partnerType', 'conversions', 'commissions', 'grosssales', 'contract'];
+  displayedColumns: string[] = ['id', 'partnerName', 'partnerType', 'conversions', 'commissions', 'grosssales', 'contract', 'details'];
   dataSource = new MatTableDataSource<Partner>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -26,18 +26,18 @@ export class ContentTableComponent implements AfterViewInit {
 
 
   ngAfterViewInit(): void {
-    // this.dashboardService.getPartners().subscribe(
-    //   (data) => {
-    //     this.dataSource.data = data;
-    //     this.dataSource.paginator = this.paginator;
-    //     this.dataSource.sort = this.sort;
-    //     this.cdr.detectChanges();
-    //   },
-    //   (error) => {
-    //     console.error('Error fetching partners:', error);
-    //     this.cdr.detectChanges();
-    //   }
-    // );
+    this.dashboardService.getPartners().subscribe(
+      (data) => {
+        this.dataSource.data = data;
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+        this.cdr.detectChanges();
+      },
+      (error) => {
+        console.error('Error fetching partners:', error);
+        this.cdr.detectChanges();
+      }
+    );
   }
 
 }

@@ -1,17 +1,10 @@
-
-
-<!-- The routed views render in the <router-outlet>-->
-
-
-<mat-drawer-container class="example-container">
+<mat-drawer-container >
   <mat-drawer mode="side" opened>
     <app-sidebar-nav></app-sidebar-nav>
-
   </mat-drawer>
 
-
   <mat-drawer-content>
-    <div style="padding:1em;">
+    <div>
       <router-outlet />
     </div>
   </mat-drawer-content>
