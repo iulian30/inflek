@@ -11,4 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class ActionButtonsComponent {
 
+ alert(message: string) {
+   alert(message);
+  }
 }

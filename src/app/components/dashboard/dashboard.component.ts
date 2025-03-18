@@ -5,6 +5,7 @@ import {ContentTableComponent} from './partials/content-table/content-table.comp
 import {DateFilterComponent} from './partials/date-filter/date-filter.component';
 import {ActionButtonsComponent} from './partials/action-buttons/action-buttons.component';
 import {DetailComponent} from './partials/modals/detail/detail.component';
+import {TitleComponent} from './partials/title/title.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +15,8 @@ import {DetailComponent} from './partials/modals/detail/detail.component';
     ContentTableComponent,
     DateFilterComponent,
     ActionButtonsComponent,
-    DetailComponent//TODO rename to modals
+    DetailComponent,//TODO rename to modals
+    TitleComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
