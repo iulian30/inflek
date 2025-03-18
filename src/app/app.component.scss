@@ -1,0 +1,9 @@
+@use "components/dashboard/dashboard.component";
+@use "components/partner/partner.component";
+@use "components/shared/sidebar/sidebar.component";
+
+.example-container {
+  width: auto;
+  height: 100%;
+  margin: 0px;
+}
