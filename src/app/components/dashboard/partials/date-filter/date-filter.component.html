@@ -1,13 +1,16 @@
-<div>
-  <mat-form-field>
-    <mat-label>Enter a date range</mat-label>
-    <mat-date-range-input [rangePicker]="picker">
+<div id="date-filter">
+  <mat-form-field style="color: #031050; width: 75%; background-color: white; font-size: 14px;">
+    <mat-label id="date-filter-label" class="d-flex align-items-center">
+      Enter a date range
+      <span class="material-symbols-outlined">arrow_drop_down</span>
+    </mat-label>
+    <mat-date-range-input  [rangePicker]="picker">
       <input matStartDate placeholder="Start date">
       <input matEndDate placeholder="End date">
     </mat-date-range-input>
 
     <mat-datepicker-toggle matIconSuffix [for]="picker">
-      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      <mat-icon style="color: #031050;" matDatepickerToggleIcon>calendar_month</mat-icon>
     </mat-datepicker-toggle>
     <mat-date-range-picker #picker></mat-date-range-picker>
   </mat-form-field>

@@ -21,5 +21,12 @@
     font-size: 16px;
   }
 
+  .table-striped tr:nth-child(odd) {
+    background-color: #F4F7FE;
+  }
+
+  .mat-mdc-paginator-container {
+    justify-content: center;
+  }
 }
 
