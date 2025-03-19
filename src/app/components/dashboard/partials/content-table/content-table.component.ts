@@ -13,7 +13,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './content-table.components.scss'
 })
 
-
 export class ContentTableComponent implements AfterViewInit {
   partners: Partner[] = [];
   displayedColumns: string[] = ['id', 'partnerName', 'partnerType', 'conversions', 'commissions', 'grosssales', 'contract', 'details'];
@@ -23,7 +22,6 @@ export class ContentTableComponent implements AfterViewInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private dashboardService: DashboardService, private cdr: ChangeDetectorRef) {}
-
 
   ngAfterViewInit(): void {
     this.dashboardService.getPartners().subscribe(
@@ -46,15 +44,5 @@ export class ContentTableComponent implements AfterViewInit {
     }
     return 0;
   }
-
-
-  getPaginator(): any {
-    if (this.paginator) {
-
-      console.log(this.paginator);
-    }
-
-  }
-
 }
 

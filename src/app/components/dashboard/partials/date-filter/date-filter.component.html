@@ -1,5 +1,5 @@
 <div id="date-filter">
-  <mat-form-field style="color: #031050; width: 75%; background-color: white; font-size: 14px;">
+  <mat-form-field class="color-primary w-75" style="font-size: 14px;">
     <mat-label id="date-filter-label" class="d-flex align-items-center">
       Enter a date range
       <span class="material-symbols-outlined">arrow_drop_down</span>
@@ -10,7 +10,7 @@
     </mat-date-range-input>
 
     <mat-datepicker-toggle matIconSuffix [for]="picker">
-      <mat-icon style="color: #031050;" matDatepickerToggleIcon>calendar_month</mat-icon>
+      <mat-icon class="color-primary" matDatepickerToggleIcon>calendar_month</mat-icon>
     </mat-datepicker-toggle>
     <mat-date-range-picker #picker></mat-date-range-picker>
   </mat-form-field>
