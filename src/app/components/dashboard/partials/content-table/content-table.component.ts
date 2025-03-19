@@ -1,9 +1,10 @@
-import {AfterViewInit, ChangeDetectorRef, Component, ViewChild} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, inject, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {DashboardService, Partner} from '../../../../services/dashboard/DashboardService';
 import { CommonModule } from '@angular/common';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 
 @Component({
@@ -32,7 +33,7 @@ export class ContentTableComponent implements AfterViewInit {
         this.cdr.detectChanges();
       },
       (error) => {
-        console.error('Error fetching partners:', error);
+
         this.cdr.detectChanges();
       }
     );
@@ -43,6 +44,12 @@ export class ContentTableComponent implements AfterViewInit {
       return Math.ceil(this.paginator.length / this.paginator.pageSize);
     }
     return 0;
+  }
+
+  private _snackBar = inject(MatSnackBar);
+
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action);
   }
 }
 

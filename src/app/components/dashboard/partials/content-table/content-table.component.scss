@@ -73,5 +73,10 @@
   .disabled-pagination span {
     color: #031050;
   }
+
+  button.mat-mdc-icon-button.mat-mdc-button-disabled-interactive,
+  .mat-mdc-paginator-page-size {
+    display: none;
+  }
 }
 
