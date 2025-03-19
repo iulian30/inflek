@@ -28,5 +28,53 @@
   .mat-mdc-paginator-container {
     justify-content: center;
   }
+
+  .mat-mdc-paginator-page-size-select {
+    text-align: center;
+  }
+
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece {
+    border: 1px solid #F1F1F1;
+  }
+
+  .current-page,
+  .next-page,
+  .previous-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 31px;
+    height: 31px;
+    border-radius: 100%;
+  }
+
+  .next-page,
+  .previous-page {
+    background: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    border: 1px solid #031050;
+    cursor: pointer;
+  }
+
+  .current-page {
+    background-color: #4F26B8;
+    color: #F8FCFF;
+  };
+
+  .disabled-pagination {
+    border-color: #031050;
+    opacity: 25%;
+    color: #F1F1F1;
+    cursor:default;
+  }
+
+  .disabled-pagination span {
+    color: #031050;
+  }
+
+
 }
 

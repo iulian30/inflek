@@ -40,5 +40,21 @@ export class ContentTableComponent implements AfterViewInit {
     );
   }
 
+  getTotalPages(): number {
+    if (this.paginator) {
+      return Math.ceil(this.paginator.length / this.paginator.pageSize);
+    }
+    return 0;
+  }
+
+
+  getPaginator(): any {
+    if (this.paginator) {
+
+      console.log(this.paginator);
+    }
+
+  }
+
 }
 
